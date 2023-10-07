@@ -1,0 +1,15 @@
+name: hello-world
+
+# event
+on: push
+
+# job
+# we need to define what happens when the event occurs by create a job
+jobs:
+  hello-world-job:
+    runs-on: ubuntu-latest
+    steps: 
+      # action
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: echo "$(cat hello_world.txt)"  
